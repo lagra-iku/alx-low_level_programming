@@ -1,5 +1,8 @@
 #include<stdio.h>
-/* A C program that prints a string */
+/*
+ * main - A C program that prints a string
+ * return :0
+ */
 int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
