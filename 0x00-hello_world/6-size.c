@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - A C program that prints the size of various types on the computer it is compiled and run on
+ * main -Size is not grandeur, and territory does not make a nation
  *
  * Return: Always 0 (Success)
  */
