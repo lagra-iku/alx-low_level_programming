@@ -1,7 +1,8 @@
-#include<stdio.h>
-/*
+#include <stdio.h>
+/**
  * main - A C program that prints a string
- * return :0
+ * 
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
