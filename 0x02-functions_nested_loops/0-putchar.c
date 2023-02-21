@@ -6,7 +6,12 @@
  */
 int main(void)
 {
-	_putchar('r');
+	char *ch = "_putchar";
+
+	while (*ch)
+	{
+		_putchar(*ch++);
+	}
 	_putchar('\n');
 	return (0);
 }
