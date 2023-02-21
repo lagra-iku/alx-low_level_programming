@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 /**
  * main - a program that prints _putchar, followed by a new line.
@@ -11,8 +10,8 @@ int main(void)
 
 	while (*c)
 	{
-		putchar(*c++);
+		_putchar(*c++);
 	}
-	putchar('\n');
+	_putchar('\n');
 	return (0);
 }
