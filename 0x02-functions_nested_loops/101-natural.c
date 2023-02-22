@@ -12,8 +12,9 @@ int main(void)
 	{
 		if ((1 % 3 == 0) || (i % 5 == 0))
 		{
-			printf("%d", sum += i);
+			sum += i;
 		}
 	}
+	printf("%d", sum);
 	return (0);
 }
