@@ -1,25 +1,39 @@
 #include "main.h"
 /**
  * print_times_table - prints the n times table
- * @n: number to output its multiplication table
+ * @n: number that should display it's multiplication table
  * Return: always 0 (success)
  */
 void print_times_table(int n)
 {
-	int i, j;
+	int i, j, m;
 
-	if ((n > 15) || (n < 0))
+	if ((n > 0) && (n < 15))
 	{
-	}
-	else
-	{
-		for (i = 0; i < n; i++)
+		for (i = 0; i <= n; i++)
 		{
-			for (j = 0; j < n; j++)
+			for (j = 0; j <= n; j++)
 			{
-				_putchar((j * i) + '0')
+				m = i * j;
+				if (j != 0)
+				{
+					_putchar(',');
+					_putchar(' ');
+				}
+				if (m >= 10)
+				{
+					_putchar((m / 10) + '0');
+					_putchar((m % 10) + '0');
+				}
+				else if (m < 10 && j != 0)
+				{
+					_putchar(' ');
+					_putchar((m % 10) + '0');
+				}
+				else
+					_putchar((m % 10) + '0');
 			}
+			_putchar('\n');
 		}
-		_putchar('\n');
 	}
 }
