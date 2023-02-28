@@ -15,11 +15,11 @@ void puts_half(char *str)
 	{
 		len = len - 1;
 		for (j = len / 2; j < len; j++)
-			_putstr(str[j + 1]);
+			_putchar(str[j + 1]);
 	} else
 	{
 		for (j = len / 2; j < len; j++)
-			_putstr(str[j]);
+			_putchar(str[j]);
 	}
 	_putchar('\n');
 }
