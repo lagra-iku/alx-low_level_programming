@@ -7,14 +7,14 @@
 char *leet(char *s)
 {
 	int i, j;
-	char toRep[] = "aeotl";
-	int repBy[] = {4, 3, 0, 7, 1};
+	char toRep[] = "aAeEoOtTlL";
+	char repBy[] = "4433007711";
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		for (j = 0; toRep[j] != '\0'; j++)
 		{
-			if (s[i] == toRep[j] || s[i] == toRep[j - 32])
+			if (s[i] == toRep[j])
 				s[i] = repBy[j];
 		}
 	}
