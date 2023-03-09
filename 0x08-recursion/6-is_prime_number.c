@@ -7,12 +7,12 @@
  */
 int _find_prime(int n, int a)
 {
-	if (a == 1)
-		return (1);
-	if (n % a == 0)
+	if (n < 2 || n % a == 0)
 		return (0);
+	else if (a > n / 2)
+		return (1);
 	else
-		return (_find_prime(n, a - 1));
+		return (_find_prime(n, a + 1));
 }
 
 /**
@@ -22,9 +22,7 @@ int _find_prime(int n, int a)
  */
 int is_prime_number(int n)
 {
-	if (n <= 1)
-		return (0);
-	else if (_find_prime(n, n / 2) > 0)
+	if (n == 2)
 		return (1);
-	return (0);
+	return (_find_prime(n, 2));
 }
