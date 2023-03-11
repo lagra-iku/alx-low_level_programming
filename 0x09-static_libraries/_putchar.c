@@ -1,18 +1,11 @@
-#include "main.h"
+#include <unistd.h>
+
 /**
- * main - a program that prints _putchar, followed by a new line.
- *
- * Return: always 0 (success)
+ * _putchar - a function to print to output
+ * @c: The character to print
+ * Return: On success 1.
  */
-int main(void)
+int _putchar(char c)
 {
-	char *ch = "_putchar";
-
-	while (*ch)
-	{
-		_putchar(*ch++);
-	}
-	_putchar('\n');
-	return (0);
+	return (write(1, &c, 1));
 }
-
