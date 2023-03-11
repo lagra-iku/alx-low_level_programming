@@ -8,8 +8,6 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, prod;
-
 	if (argc != 3)
 	{
 		printf("%s\n", "Error");
@@ -17,11 +15,7 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		for (i = 1; i < argc; i++)
-		{
-			prod *= atoi(argv[i]);
-		}
-		printf("%d\n", prod);
+		printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
 	}
 	return (0);
 }
