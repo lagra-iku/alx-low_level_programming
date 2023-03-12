@@ -9,8 +9,7 @@
 int main(int argc, char *argv[])
 {
 	int cent[] = {25, 10, 5, 2, 1};
-	int i, count = 0;
-	int num = atoi(argv[1]);
+	int i, num, count = 0;
 
 	if (argc != 2)
 	{
@@ -21,6 +20,7 @@ int main(int argc, char *argv[])
 		printf("%d\n", 0);
 		return (0);
 	}
+	num = atoi(argv[1]);
 	for (i = 0; i < 5; i++)
 	{
 		if (num >= cent[i])
