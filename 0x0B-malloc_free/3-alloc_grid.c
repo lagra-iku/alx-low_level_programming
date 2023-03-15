@@ -14,13 +14,18 @@ int **alloc_grid(int width, int height)
 
 	if (width <= 0 || height <= 0)
 		return (NULL);
-	_2darr = malloc(width * sizeof(int *));
-	for (i = 0; i < width; i++)
-		_2darr[i] = malloc(height * sizeof(int));
-	for (i = 0; i < width; i++)
-		for (j = 0; j < height; j++)
+	_2darr = malloc(height * sizeof(int *));
+	for (i = 0; i < height; i++)
+	{
+		_2darr[i] = malloc(width * sizeof(int));
+		if (_2darr == NULL)
+		{
+			free(_2darr);
+			return (NULL);
+		}
+	}
+	for (i = 0; i < height; i++)
+		for (j = 0; j < width; j++)
 			_2darr[i][j] = 0;
-	if (_2darr == NULL)
-		return (NULL);
 	return (_2darr);
 }
