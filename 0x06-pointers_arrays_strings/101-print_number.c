@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
  * print_number - a function that prints an integer.
@@ -9,6 +10,11 @@ void print_number(int n)
 {
 	int div = 1;
 
+	if (n < 0)
+	{
+		_putchar('-');
+		n = -n;
+	}
 	while (n / div >= 10)
 	{
 		div *= 10;
