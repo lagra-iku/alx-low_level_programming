@@ -15,11 +15,18 @@ int **alloc_grid(int width, int height)
 	if (width <= 0 || height <= 0)
 		return (NULL);
 	_2darr = malloc(height * sizeof(int *));
+	if (_2darr == NULL)
+		return (NULL);
 	for (i = 0; i < height; i++)
 	{
 		_2darr[i] = malloc(width * sizeof(int));
-		if (_2darr == NULL)
+		if (_2darr[i] == NULL)
 		{
+			while (i >= 0)
+			{
+				free(_2darr[i]);
+				i--;
+			}
 			free(_2darr);
 			return (NULL);
 		}
