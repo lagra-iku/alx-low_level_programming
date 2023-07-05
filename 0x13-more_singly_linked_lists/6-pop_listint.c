@@ -1,35 +1,23 @@
-#include <stdlib.h>
-#include <string.h>
 #include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 #include "lists.h"
 
 /**
- * main - check the code
- *
- * Return: Always 0.
- */
-int main(void)
+* pop_listint - a func that deletes the head node of a linked list
+* @head: head of list
+* Return: void
+*/
+int pop_listint(listint_t **head)
 {
-	listint_t *head;
+	listint_t *temp;
 	int n;
 
-	head = NULL;
-	add_nodeint_end(&head, 0);
-	add_nodeint_end(&head, 1);
-	add_nodeint_end(&head, 2);
-	add_nodeint_end(&head, 3);
-	add_nodeint_end(&head, 4);
-	add_nodeint_end(&head, 98);
-	add_nodeint_end(&head, 402);
-	add_nodeint_end(&head, 1024);
-	print_listint(head);
-	n = pop_listint(&head);
-	printf("- %d\n", n);
-	print_listint(head);
-	n = pop_listint(&head);
-	printf("- %d\n", n);
-	print_listint(head);
-	free_listint2(&head);
-	printf("%p\n", (void *)head);
-	return (0);
+	if (head == NULL || *head == NULL)
+		return (0);
+	temp = *head;
+	*head = (*head)->next;
+	n = temp->n;
+	free(temp);
+	return (n);
 }
