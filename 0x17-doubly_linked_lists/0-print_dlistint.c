@@ -1,3 +1,5 @@
+#include "lists.h"
+
 /**
  * print_dlistint - a func that prints all the elements of a dlist
  * @h: pointer to the head
